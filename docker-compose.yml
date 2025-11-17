@@ -6,12 +6,12 @@ services:
     container_name: kieserver-dashboard-2-charts
     network_mode: "host"
     environment:
-      - LOG_DIR=/home/ruben/logs
+      - LOG_DIR=/home/ruben/Git/Redhat-DecisionManager/01-KieserverLogs/prod
       - PORT=8081
-      - TEMPLATE_DIR=/home/ruben/Git/rules-analizator-python/templates
+      - TEMPLATE_DIR=/app/templates
       - TZ=America/Argentina/Buenos_Aires
     volumes:
-      - /home/ruben/logs:/home/ruben/logs
-      - /home/ruben/Git/rules-analizator-python/templates:/home/ruben/Git/rules-analizator-python/templates
+      - /home/ruben/Git/Redhat-DecisionManager/01-KieserverLogs/prod:/home/ruben/Git/Redhat-DecisionManager/01-KieserverLogs/prod
+      - /home/ruben/Git/kieserver-dashboard-2-charts/templates:/app/templates
     restart: always
 
